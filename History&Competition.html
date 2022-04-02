@@ -9,20 +9,20 @@
 </head>
 
 
-<body>
+<body onload="buttonFunction()">
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="History&Competition.html">History&Competitions</a></li>
-    <li><a href=" ">Come back soon</a></li>
-    <li style="float:right"><a class="active" href="About.html">About</a></li>
+    <li><a href="index.html" onclick="alertFunction()">Home</a></li>
+    <li><a href="History&Competition.html" onclick="alertFunction()">History&Competitions</a></li>
+    <li><a href=" " onclick="alertFunction()">Come back soon</a></li>
+    <li style="float:right"><a class="active" href="About.html" onclick="alertFunction()">About</a></li>
   </ul>
 	<center>
+
 	<font size="10"><p style="color: white;">History of this sport</p></font>
 
-    </center>
-	<img src="https://www.k1speed.ca/wp-content/uploads/2019/01/arrive-and-drive.jpg" width='1330' length='900'>
+	<img onmouseover="smallImg(this)" onmouseout="normalImg(this)" border="0" src="https://www.k1speed.ca/wp-content/uploads/2019/01/arrive-and-drive.jpg">
  	<hr>
-	<center>
+
 	<font size="6"><p class="History">Karting is form of racing in a small four-wheel vehicle known as a go kart. In the beginning, the first-ever go kart was created in Los Angeles by Art Ingels in 1956. The first official organized race took place with several dozen home-built machines in 1957 in the parking lot of the famed Rose Bowl in Pasadena, California. Now, it has been estimated that over 1.6 billion people worldwide have raced go karts. Ingels’ one-off two-stroke creation was the inspiration for Duffy Livingstone and Roy Desbrow to start Go Kart Manufacturing, Co., Inc in 1958. The pair created their own versions of the go kart and then found inexpensive engines from the failed West Bend rotary lawn mower venture. Presently, karting continues to grow, especially the form known as indoor karting.</p></font>
 	
 	<hr>
@@ -47,8 +47,52 @@
 
 	<font size="8" style="color: white;text-align: center;"><p><i>Click to visit my channel</i></p></font>
     <a href="https://www.youtube.com/channel/UCEuD8VASlNj7w1zwpNDXFPw"><img src="https://miro.medium.com/max/2000/1*0mXxgWIQCki7CQxXf9drhw.jpeg" width="200" height="160"></a>
+  <font id="word" style="color: blue;" onclick="document.getElementById('word').innerHTML = 'Thank you for your time.'" ><h2>Hello, welcome to my website.</h2></font>
 
 	</center>
+
+<script type="text/javascript">
+    function buttonFunction(){
+    var t = new Date();
+    alert(t);
+        switch(new Date().getDay()){
+      case 0:
+        alert("Tomorrow is Monnday");
+        break;
+      case 1:
+        alert("Tomorrow is Tuesday");
+        break;
+      case 2:
+        alert("Tomorrow is Wednesday");
+        break;
+      case 3:
+        alert("Tomorrow is Thursday");
+        break;
+    case 4:
+        alert("Tomorrow is Friday");
+        break;
+    case 5:
+        alert("Tomorrow is Saturday");
+        break;
+      case 6:
+        alert("Tomorrow is Sunday");  
+  }
+}
+    
+  function smallImg(x) {
+  x.style.height = "700px";
+  x.style.width = "1100px";
+}
+
+function normalImg(x) {
+  x.style.height = "900px";
+  x.style.width = "1330px";
+}
+
+function alertFunction(){
+alert("Thank you for your time.")
+}
+  </script>
 
 </body>
 
